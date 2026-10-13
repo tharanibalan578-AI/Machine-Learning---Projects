@@ -1,0 +1,75 @@
+Customer Support Ticket Routing using NLP
+Project Overview
+This project is a simple Natural Language Processing (NLP) system that automatically routes customer support tickets to the appropriate department.
+
+The system analyzes the ticket text, matches relevant keywords with predefined support categories, and identifies named entities using spaCy.
+
+Support Categories
+Billing Team
+Technical Team
+Refund Team
+Sales Team
+Technologies Used
+Python
+spaCy
+Natural Language Processing (NLP)
+How It Works
+The project follows these steps:
+
+Load the spaCy NLP pipeline.
+Create sample customer support tickets.
+Define keywords for each support category.
+Process each ticket using spaCy.
+Convert the ticket text to lowercase.
+Match ticket keywords with category keywords.
+Calculate a score for each category.
+Perform Entity Recognition using spaCy.
+Select the category with the highest score.
+Route the ticket to the appropriate team.
+Example
+Input
+My payment failed.
+Output
+Scores: {'Billing Team': 1, 'Technical Team': 0, 'Refund Team': 0, 'Sales Team': 0}
+Entities: []
+Routed To: Billing Team
+Another example:
+
+Need refund for my order.
+Output:
+
+Routed To: Refund Team
+Project Structure
+customer-support-ticket-routing-nlp/
+│
+├── ticket_routing.py
+└── README.md
+Installation
+Install spaCy:
+
+pip install spacy
+Download the English spaCy model:
+
+python -m spacy download en_core_web_sm
+Run the Project
+python ticket_routing.py
+Key NLP Concepts
+NLP Pipeline
+Keyword Matching
+Text Processing
+Entity Recognition
+Text Classification
+Automated Ticket Routing
+Future Improvements
+This project can be improved by using:
+
+spaCy Matcher
+Text Similarity
+Machine Learning classification
+TF-IDF
+Word Embeddings
+Transformer-based models
+User input for real-time ticket classification
+Learning Outcome
+This project helped me understand how NLP can be used to process customer messages and automatically route them to the appropriate support team.
+
